@@ -1,0 +1,58 @@
+﻿@model PruebaExamen.Models.Partidos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Partidos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipos.nombreEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipos.nombreEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaCreacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaCreacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.golesMarcados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.golesMarcados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.golesRecibidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.golesRecibidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resultado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resultado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,90 @@
+﻿@model PruebaExamen.Models.Posiciones
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Posiciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Equipos.nombreEquipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Equipos.nombreEquipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partidosJugados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partidosJugados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partidosGanados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partidosGanados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partidosEmpatados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partidosEmpatados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partidosPerdidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partidosPerdidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.golesFavor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.golesFavor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.golesContra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.golesContra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diferenciaGoles)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diferenciaGoles)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.puntosAcumulados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.puntosAcumulados)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

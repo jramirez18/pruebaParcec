@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PruebaExamen.Models.Equipos>
+
+@{
+    ViewBag.Title = "Equipos";
+}
+
+<h2>Equipos</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreEquipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreEquipo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idEquipo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idEquipo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idEquipo })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<PruebaExamen.Models.Posiciones>
+
+@{
+    ViewBag.Title = "Tabla de Posiciones";
+}
+
+<h2>TABLA DE POSICIONES - LIGA NACIONAL DE FÚTBOL DE GUATEMALA</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Equipos.nombreEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.partidosJugados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.partidosGanados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.partidosEmpatados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.partidosPerdidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.golesFavor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.golesContra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diferenciaGoles)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.puntosAcumulados)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Equipos.nombreEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.partidosJugados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.partidosGanados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.partidosEmpatados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.partidosPerdidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.golesFavor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.golesContra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diferenciaGoles)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.puntosAcumulados)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
